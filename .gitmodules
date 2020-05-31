@@ -10,9 +10,6 @@
 [submodule "vim/.vim/pack/filetype/opt/graphql"]
 	path = vim/.vim/pack/filetype/opt/graphql
 	url = https://github.com/jparise/vim-graphql.git
-[submodule "vim/.vim/pack/plugings/start/surround"]
-	path = vim/.vim/pack/plugings/start/surround
-	url = https://tpope.io/vim/surround.git
 [submodule "vim/.vim/pack/plugins/start/ultisnips"]
 	path = vim/.vim/pack/plugins/start/ultisnips
 	url = https://github.com/sirver/ultisnips
