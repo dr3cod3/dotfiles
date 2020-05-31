@@ -31,3 +31,9 @@
 [submodule "vim/.vim/plug-config/pack/plugins/start/surround"]
 	path = vim/.vim/plug-config/pack/plugins/start/surround
 	url = https://github.com/tpope/vim-surround
+[submodule "vim/.vim/pack/pluigins/start/coc"]
+	path = vim/.vim/pack/pluigins/start/coc
+	url = https://github.com/neoclide/coc.nvim.git
+[submodule "vim/.vim/pack/plugins/strat/surround"]
+	path = vim/.vim/pack/plugins/strat/surround
+	url = https://github.com/tpope/vim-surround
