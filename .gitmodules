@@ -31,3 +31,6 @@
 [submodule "vim/.vim/plug-config/pack/plugins/start/surround"]
 	path = vim/.vim/plug-config/pack/plugins/start/surround
 	url = https://github.com/tpope/vim-surround
+[submodule "vim/.vim/pack/plugins/start/surround"]
+	path = vim/.vim/pack/plugins/start/surround
+	url = https://github.com/tpope/vim-surround
