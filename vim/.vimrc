@@ -14,6 +14,7 @@ imap <c-u> <esc>vwUi
 nmap <c-u> vwU
 syntax on
 set nu rnu
+set hidden
 set nowrap
 set smartcase
 set noswapfile
