@@ -34,3 +34,9 @@
 [submodule "vim/.vim/pack/plugins/start/surround"]
 	path = vim/.vim/pack/plugins/start/surround
 	url = https://github.com/tpope/vim-surround
+[submodule "vim/.vim/pack/filetype/opt/emmet"]
+	path = vim/.vim/pack/filetype/opt/emmet
+	url = https://github.com/mattn/emmet-vim.git
+[submodule "vim/.vim/pack/filetype/opt/livedown"]
+	path = vim/.vim/pack/filetype/opt/livedown
+	url = https://github.com/shime/vim-livedown.git
