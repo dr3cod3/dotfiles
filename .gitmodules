@@ -40,3 +40,6 @@
 [submodule "vim/.vim/pack/filetype/opt/htmlCSSPrv"]
 	path = vim/.vim/pack/filetype/opt/htmlCSSPrv
 	url = https://github.com/turbio/bracey.vim.git
+[submodule "vim/.vim/pack/filetype/opt/Livedown"]
+	path = vim/.vim/pack/filetype/opt/Livedown
+	url = https://github.com/shime/vim-livedown.git
