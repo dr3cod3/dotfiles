@@ -1,5 +1,5 @@
-dotfiles/**/undodir
-dotfiles/**/view
-dotfiles/vim/**/*.zip
+dotfiles/**/undodir/
+view/
+dotfiles/vim/**/.netrwhist/
 
 
