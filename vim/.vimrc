@@ -78,20 +78,23 @@ highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 
 "Plugins settings
-let g:indentLine_char_list = ['|', '¦', '┆','│', '⎸',' ▏', '┊']
+let g:indentLine_char_list = [ '¦', '┆', ' ▏', '┊']
 let g:indentLine_leadingSpaceEnabled = 1
 let g:indentLine_leadingSpaceChar = '·'
 
 
 " git (fugitive) maps
 map <Leader>gd :Gdiffsplit<CR>
-map <Leader>gb :Gblame<CR
+map <Leader>gb :Gblame<CR>
 
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-w>l
 
 " emmet-vim config
-let g:user_emmet_leader_key='<C-e>'
+let g:user_emmet_leader_key=','
 let g:user_emmet_mode='iv'  " enable only in insert and visual modes
-
 
 " should markdown preview get shown automatically upon opening markdown buffer
 let g:livedown_autorun = 0
