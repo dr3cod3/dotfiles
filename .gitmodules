@@ -1,9 +1,6 @@
 [submodule "vim/.vim/pack/plugins/start/coc"]
 	path = vim/.vim/pack/plugins/start/coc
 	url = https://github.com/neoclide/coc.nvim.git
-[submodule "vim/.vim/pack/plugins/start/fugitive"]
-    path = vim/.vim/pack/plugins/start/fugitive
-    url = https://github.com/tpope/fugitive.git
 [submodule "vim/.vim/pack/indent/start/indentLint"]
 	path = vim/.vim/pack/indent/start/indentLint
 	url = https://github.com/Yggdroot/indentLine.git
