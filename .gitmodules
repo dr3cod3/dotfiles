@@ -1,9 +1,9 @@
 [submodule "vim/.vim/pack/plugins/start/coc"]
 	path = vim/.vim/pack/plugins/start/coc
 	url = https://github.com/neoclide/coc.nvim.git
-[submodule "vim/.vim/pack/git/start/fugitive"]
-	path = vim/.vim/pack/git/start/fugitive
-	url = https://tpope.io/vim/fugitive.git
+[submodule "vim/.vim/pack/plugins/start/fugitive"]
+    path = vim/.vim/pack/plugins/start/fugitive
+    url = https://github.com/tpope/fugitive.git
 [submodule "vim/.vim/pack/indent/start/indentLint"]
 	path = vim/.vim/pack/indent/start/indentLint
 	url = https://github.com/Yggdroot/indentLine.git
@@ -12,13 +12,13 @@
 	url = https://github.com/jparise/vim-graphql.git
 [submodule "vim/.vim/pack/plugins/start/ultisnips"]
 	path = vim/.vim/pack/plugins/start/ultisnips
-	url = https://github.com/sirver/ultisnips
+	url = https://github.com/sirver/ultisnips.git
 [submodule "vim/.vim/pack/plugins/start/repeat"]
 	path = vim/.vim/pack/plugins/start/repeat
-	url = https://tpope.io/vim/repeat.git
+	url = https://github.com/tpope/vim-repeat.git
 [submodule "vim/.vim/pack/syntax/start/syntastic"]
 	path = vim/.vim/pack/syntax/start/syntastic
-	url = https://github.com/scrooloose/syntastic
+	url = https://github.com/vim-syntastic/syntastic.git
 [submodule "vim/.vim/pack/plugins/start/gundo"]
 	path = vim/.vim/pack/plugins/start/gundo
 	url = https://github.com/sjl/gundo.vim.git
@@ -28,12 +28,9 @@
 [submodule "vim/.vim/pack/colors/start/vim-colorschemes"]
 	path = vim/.vim/pack/colors/start/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes
-[submodule "vim/.vim/plug-config/pack/plugins/start/surround"]
-	path = vim/.vim/plug-config/pack/plugins/start/surround
-	url = https://github.com/tpope/vim-surround
 [submodule "vim/.vim/pack/plugins/start/surround"]
 	path = vim/.vim/pack/plugins/start/surround
-	url = https://github.com/tpope/vim-surround
+	url = https://github.com/tpope/vim-surround.git
 [submodule "vim/.vim/pack/filetype/opt/emmet"]
 	path = vim/.vim/pack/filetype/opt/emmet
 	url = https://github.com/mattn/emmet-vim.git
