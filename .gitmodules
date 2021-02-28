@@ -43,3 +43,6 @@
 [submodule "vim/.vim/pack/filetype/opt/Livedown"]
 	path = vim/.vim/pack/filetype/opt/Livedown
 	url = https://github.com/shime/vim-livedown.git
+[submodule "vim/.vim/pack/plugins/start/fzf.vim"]
+	path = vim/.vim/pack/plugins/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim.git

@@ -3,7 +3,7 @@ iabbrev ccopy Copyright 2020 Adebola Adesina, all rights reserved.
 iabbrev ssig -- <cr>Adebola Adesina<cr>dr3cod3form3@outlook.com
 " Make space more useful
 "nnoremap <space> za
-inoremap jk <ESC>
+inoremap kk <ESC>
 let mapleader = " "
 let maplocalleader = "\\"
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -37,10 +37,12 @@ let g:netrw_liststyle=3   "Shows the tree listing
 "#Set the split windows to always be equal and open splits to the right
 let g:netrw_winsize=25
 let g:netrw_preview=1
+
 augroup ProjectDrawer
   autocmd!
   autocmd VimEnter * :Vexplore
 augroup END
+
 set autoindent
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
@@ -54,13 +56,21 @@ set noswapfile
 set nobackup
 set undodir=~/.vim/undodir
 set undofile
+set scrolloff=5
+set noshowmode
+"Give more space for displaying messages.
+set cmdheight=2
+set termguicolors
 set incsearch
 set textwidth=80
 set colorcolumn=80
+set signcolumn=yes
 set smartindent
 set expandtab
 set noerrorbells
 set tabstop=4 softtabstop=4 shiftwidth=4
+colorscheme gruvbox
+"highlight Normal guibg=none
 "set listchars=tab:→\ ,eol:↲
 "set list
 set listchars=
@@ -75,7 +85,15 @@ set listchars+=nbsp:⣿
 filetype indent on
 " set clipboard=unamed
 highlight ColorColumn ctermbg=0 guibg=lightgrey
+"autocmd FileType python nnoremap <buffer> <cr> :silent w<bar>only<bar>vsp<bar>term ipython3 -i %<cr>
 
+" <space>r runs the current file
+noremap <leader>r :!"%:p" <cr>
+" <space>l runs the current file and pipes it into less
+nnoremap <leader>l :!"%:p"  \| less -r<cr>
+" \<space> runs `make`
+nnoremap <localleader><space> :!make<cr>
+nnoremap =a gg=G``
 
 "Plugins settings
 let g:indentLine_char_list = [ '¦', '┆', ' ▏', '┊']
@@ -106,5 +124,5 @@ let g:livedown_open = 1
 let g:livedown_port = 1337
 
 " the browser to use, can also be firefox, chrome or other, depending on your executable
-let g:livedown_browser = "safari"
+let g:livedown_browser = "chrome"
 nmap gm :LivedownToggle<CR>
