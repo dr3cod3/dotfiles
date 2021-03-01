@@ -7,10 +7,6 @@ iabbrev ssig -- <cr>Adebola Adesina<cr>dr3cod3form3@outlook.com
 inoremap kk <ESC>
 let mapleader = " "
 let maplocalleader = "\\"
-packadd! fzf
-packadd! fzf.vim
-set rtp+=/usr/bin/fzf
-"call fzf#install()
 let mapleader = " "
 let maplocalleader = "\\"
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
