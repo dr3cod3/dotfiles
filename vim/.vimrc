@@ -3,7 +3,14 @@ iabbrev ccopy Copyright 2020 Adebola Adesina, all rights reserved.
 iabbrev ssig -- <cr>Adebola Adesina<cr>dr3cod3form3@outlook.com
 " Make space more useful
 "nnoremap <space> za
+" Fzf integration with fzf.vim
 inoremap kk <ESC>
+let mapleader = " "
+let maplocalleader = "\\"
+packadd! fzf
+packadd! fzf.vim
+set rtp+=/usr/bin/fzf
+"call fzf#install()
 let mapleader = " "
 let maplocalleader = "\\"
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
@@ -14,6 +21,7 @@ imap <c-d> <esc>ddi
 imap <c-u> <esc>vwUi
 nmap <c-u> vwU
 syntax enable 
+
 "Map F5 to toggle on and off the line numbers in Normal mode
 nmap <F5> gh
 "These next 2 lines will hide the dot files on startup
@@ -70,7 +78,13 @@ set expandtab
 set noerrorbells
 set tabstop=4 softtabstop=4 shiftwidth=4
 colorscheme gruvbox
-"highlight Normal guibg=none
+
+"if has('nvim'|| 'vim' >= 8)
+"autocmd vimenter * highlight Normal guibg=NONE ctermbg=NONE
+"else
+"    autocmd vimenter * highlight Normal guibg=NONE ctermbg=NONE
+"endif
+autocmd vimenter * highlight Normal guibg=NONE Ctermbg=NONE
 "set listchars=tab:→\ ,eol:↲
 "set list
 set listchars=
@@ -83,9 +97,10 @@ set listchars+=extends:»
 set listchars+=precedes:«
 set listchars+=nbsp:⣿
 filetype indent on
-" set clipboard=unamed
+set clipboard=unnamed
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 "autocmd FileType python nnoremap <buffer> <cr> :silent w<bar>only<bar>vsp<bar>term ipython3 -i %<cr>
+
 
 " <space>r runs the current file
 noremap <leader>r :!"%:p" <cr>
@@ -126,3 +141,34 @@ let g:livedown_port = 1337
 " the browser to use, can also be firefox, chrome or other, depending on your executable
 let g:livedown_browser = "chrome"
 nmap gm :LivedownToggle<CR>
+
+" Fzf setup
+let g:fzf_preview_window = ['right:50%', 'ctrl-/']
+
+command! -bang -nargs=? -complete=dir Files
+    \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--info=inline']}), <bang>0)
+
+" All files
+command! -nargs=? -complete=dir AF
+  \ call fzf#run(fzf#wrap(fzf#vim#with_preview({
+  \   'source': 'fd --type f --hidden --follow --exclude .git --no-ignore . '.expand(<q-args>)
+  \ })))
+
+function! RipgrepFzf(query, fullscreen)
+  let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
+  let initial_command = printf(command_fmt, shellescape(a:query))
+  let reload_command = printf(command_fmt, '{q}')
+  let options = {'options': ['--phony', '--query', a:query, '--bind', 'change:reload:'.reload_command]}
+  let options = fzf#vim#with_preview(options, 'right', 'ctrl-/')
+  call fzf#vim#grep(initial_command, 1, options, a:fullscreen)
+endfunction
+
+command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+
+"Project view
+nnoremap <leader>pv :Vex<CR>
+
+"Git project fzf
+nnoremap <C-p> :GFiles<CR>
+nnoremap <leader>pf :Files<CR>
+
